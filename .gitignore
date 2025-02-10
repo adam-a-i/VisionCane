@@ -1,0 +1,8 @@
+cache
+*.wav
+*.mp3
+*.osm
+*.zip
+sync_watch
+resources/vosk-model
+resources/
