@@ -14,12 +14,14 @@ except ImportError:
         OUT = "OUT"
         HIGH = 1
         LOW = 0
+        PUD_UP = 21
+        FALLING = 212
 
         def setmode(self, mode):
             return
             print(f"[MOCK] Setting mode to {mode}")
 
-        def setup(self, pin, mode):
+        def setup(self, *_ ,**__):
             return
             print(f"[MOCK] Setting up pin {pin} as {mode}")
 
@@ -35,6 +37,9 @@ except ImportError:
         def cleanup(self):
             return
             print("[MOCK] Cleaning up GPIO")
+
+        def add_event_detect(self, *_ , **__):
+            pass
 
 
     GPIO = MockGPIO()
