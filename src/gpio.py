@@ -12,8 +12,8 @@ except ImportError:
         BOARD = "BOARD"
         IN = "IN"
         OUT = "OUT"
-        HIGH = "HIGH"
-        LOW = "LOW"
+        HIGH = 1
+        LOW = 0
 
         def setmode(self, mode):
             return
