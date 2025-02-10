@@ -10,12 +10,13 @@ assert numpy  # avoid "imported but unused" message (W0611)
 from vosk import Model, KaldiRecognizer
 
 # Set up the model and recognizer
-model_path = "../resources/vosk-model"  # Replace with the path to your Vosk model
-if not os.path.exists(model_path):
-    print(f"Please download a model from https://alphacephei.com/vosk/models and unpack as {model_path}")
-    sys.exit(1)
+# model_path = "../resources/vosk-model"  # Replace with the path to your Vosk model
+# if not os.path.exists(model_path):
+#     print(f"Please download a model from https://alphacephei.com/vosk/models and unpack as {model_path}")
+#     sys.exit(1)
+# model = Model(model_path=model_path)
 
-model = Model(model_path)
+model = Model(lang='en-us')
 recognizer = KaldiRecognizer(model, 16000)
 
 # Audio settings
